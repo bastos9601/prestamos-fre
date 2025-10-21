@@ -5,7 +5,7 @@ FROM php:8.2-apache
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 # Instalar Node.js para construir el frontend
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs
 
 # Instalar extensiones necesarias para PostgreSQL y utilidades
